@@ -2,13 +2,13 @@ import { Github, Linkedin } from "lucide-react";
 
 const Team = () => {
   return (
-    <div className="min-h-screen pt-16 bg-gradient-to-br from-blue-50 to-pink-50">
+    <div className="min-h-screen pt-16 bg-background">
       <div className="container mx-auto px-4 py-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">
+          <h1 className="text-5xl font-bold text-primary mb-6">
             Meet Our Talented Team
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-primary">
             A group of creative minds and innovative problem-solvers
           </p>
         </div>
@@ -17,7 +17,7 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white/80 backdrop-blur rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-card/80 backdrop-blur rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-border"
             >
               <div className="relative mb-6">
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
@@ -28,14 +28,14 @@ const Team = () => {
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-center mb-2">{member.name}</h3>
-              <p className="text-gray-600 text-center mb-4">{member.role}</p>
+              <h3 className="text-xl font-semibold text-primary text-center mb-2">{member.name}</h3>
+              <p className="text-primary text-center mb-4">{member.role}</p>
               <div className="flex justify-center gap-4">
                 <a
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary transition-colors"
+                  className="text-primary hover:text-primary/80 transition-colors"
                 >
                   <Linkedin size={20} />
                 </a>
@@ -43,7 +43,7 @@ const Team = () => {
                   href={member.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary transition-colors"
+                  className="text-primary hover:text-primary/80 transition-colors"
                 >
                   <Github size={20} />
                 </a>

@@ -5,10 +5,10 @@ const Home = () => {
     <div className="min-h-screen pt-16 bg-background">
       <div className="container mx-auto px-4 py-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">
+          <h1 className="text-5xl font-bold text-primary mb-6">
             Transform Your Digital Experience
           </h1>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-primary">
             Harness the power of innovation to elevate your digital presence and drive meaningful growth.
           </p>
         </div>
@@ -17,21 +17,21 @@ const Home = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-card backdrop-blur rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-card backdrop-blur rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-border"
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <feature.icon className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4">
+                <feature.icon className="w-6 h-6 text-background" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-primary mb-2">{feature.title}</h3>
+              <p className="text-primary">{feature.description}</p>
             </div>
           ))}
         </div>
 
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Elevate Your Digital Strategy</h2>
-          <p className="text-xl text-muted-foreground mb-8">Begin your journey towards digital excellence today.</p>
-          <button className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+          <h2 className="text-3xl font-bold text-primary mb-4">Elevate Your Digital Strategy</h2>
+          <p className="text-xl text-primary mb-8">Begin your journey towards digital excellence today.</p>
+          <button className="bg-white text-background px-8 py-3 rounded-lg hover:bg-white/90 transition-colors">
             Get Started
           </button>
         </div>
